@@ -1,0 +1,67 @@
+<%= form_for(zombie) do |f| %>
+  <% if zombie.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(zombie.errors.count, "error") %> prohibited this zombie from being saved:</h2>
+
+      <ul>
+      <% zombie.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bio %>
+    <%= f.text_area :bio %>
+  </div>
+
+  <div class="field">
+    <%= f.label :age %>
+    <%= f.number_field :age %>
+  </div>
+
+  <div class="field">
+    <%= f.label :roting %>
+    <%= f.check_box :roting %>
+  </div>
+
+  <div class="field">
+    <%= f.label :salary %>
+    <%= f.text_field :salary %>
+  </div>
+
+  <div class="field">
+    <%= f.label :heigth %>
+    <%= f.text_field :heigth %>
+  </div>
+
+  <div class="field">
+    <%= f.label :premium %>
+    <%= f.text_field :premium %>
+  </div>
+
+  <div class="field">
+    <%= f.label :zombification %>
+    <%= f.date_select :zombification %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lunch %>
+    <%= f.time_select :lunch %>
+  </div>
+
+  <div class="field">
+    <%= f.label :born %>
+    <%= f.datetime_select :born %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

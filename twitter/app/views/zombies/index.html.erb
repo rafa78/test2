@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<style>
+  
+  body{background-color:black;}
+  
+  
+</style>
+
+
+
+
+<h1>Zombies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Bio</th>
+      <th>Age</th>
+      <th>Roting</th>
+      <th>Salary</th>
+      <th>Heigth</th>
+      <th>Premium</th>
+      <th>Zombification</th>
+      <th>Lunch</th>
+      <th>Born</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @zombies.each do |zombie| %>
+      <tr>
+       <td><%= zombie.name %></td>
+        <td><%= zombie.bio %></td>
+        <td><%= zombie.age %></td>
+        <td><%= zombie.roting %></td>
+        <td><%= zombie.salary %></td>
+        <td><%= zombie.heigth %></td>
+        <td><%= zombie.premium %></td>
+        <td><%= zombie.zombification %></td>
+        <td><%= zombie.lunch %></td>
+        <td><%= zombie.born %></td>
+        <td><%= link_to 'Show', zombie %></td>
+        <td><%= link_to 'Edit', edit_zombie_path(zombie) %></td>
+        <td><%= link_to 'Destroy', zombie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Zombie', new_zombie_path %>

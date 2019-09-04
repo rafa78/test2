@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  bio: MyText
+  age: 1
+  roting: false
+  salary: 9.99
+  heigth: 1.5
+  premium: 
+  zombification: 2019-09-03
+  lunch: 2019-09-03 18:42:32
+  born: 2019-09-03 18:42:32
+
+two:
+  name: MyString
+  bio: MyText
+  age: 1
+  roting: false
+  salary: 9.99
+  heigth: 1.5
+  premium: 
+  zombification: 2019-09-03
+  lunch: 2019-09-03 18:42:32
+  born: 2019-09-03 18:42:32
